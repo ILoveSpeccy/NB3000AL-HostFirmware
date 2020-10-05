@@ -9,21 +9,17 @@ So, set jumper "Platform upgrade enable" and switch on the board. "Golden" boot 
 Now start the Altium Designer and automatic firmware update will start.
 Click on "next" button, select new firmware (bin\Firmware.bin in this repository) and click "next" again.
 Update process will take a few minutes. Done!
+Don't forget to remove the "Platform upgrade enable" jumper.
 
 Now the driver should be installed. I used Zadig 2.5 (https://zadig.akeo.ie) to install WinUSB driver.
 
 There are two ways to load the FPGA:
 - via USB using "loader.exe" tool
 - via JTAG using external ByteBlaster connected on "System JTAG" Header:
-  
   TDI : pin 5
-  
   TDO : pin 6
-
   TCK : pin 7
-
   TMS : pin 8
-
   GND : pin 9 and 10
 
 For testing purposes i created an LED-Blink FPGA test file (blink.rbf). Just run "loader.exe blink.rbf" and red LED 7 will blink.
