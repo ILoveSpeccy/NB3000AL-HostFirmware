@@ -16,10 +16,15 @@ Now the driver should be installed. I used Zadig 2.5 (https://zadig.akeo.ie) to 
 There are two ways to load the FPGA:
 - via USB using "loader.exe" tool
 - via JTAG using external ByteBlaster connected on "System JTAG" Header:
+  
   TDI : pin 5
+  
   TDO : pin 6
+  
   TCK : pin 7
+  
   TMS : pin 8
+  
   GND : pin 9 and 10
 
 For testing purposes i created an LED-Blink FPGA test file (blink.rbf). Just run "loader.exe blink.rbf" and red LED 7 will blink.
