@@ -1,0 +1,182 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2012 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+# Date created = 21:18:43  February 21, 2013
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Firmware_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C10F256C8
+set_global_assignment -name TOP_LEVEL_ENTITY Firmware
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "12.1 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:18:43  FEBRUARY 21, 2013"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 256
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name GENERATE_RBF_FILE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_M15 -to clk
+set_location_assignment PIN_B11 -to jtag_ext_tdo
+set_location_assignment PIN_R10 -to jtag_int_tdo
+set_location_assignment PIN_F8 -to jtag_int_tdi
+set_location_assignment PIN_F6 -to jtag_int_tms
+set_location_assignment PIN_B6 -to jtag_int_tck
+set_location_assignment PIN_E15 -to jtag_ext_tck
+set_location_assignment PIN_J14 -to jtag_ext_tdi
+set_location_assignment PIN_G15 -to jtag_ext_tms
+set_location_assignment PIN_R7 -to led1_blue
+set_location_assignment PIN_K8 -to led1_green
+set_location_assignment PIN_F5 -to led1_red
+set_location_assignment PIN_B1 -to led2_blue
+set_location_assignment PIN_R9 -to led2_green
+set_location_assignment PIN_C2 -to led2_red
+set_location_assignment PIN_R14 -to usb_d[1]
+set_location_assignment PIN_K15 -to usb_d[12]
+set_location_assignment PIN_J16 -to usb_d[4]
+set_location_assignment PIN_J13 -to usb_ready
+set_location_assignment PIN_D16 -to usb_fifoa1
+set_location_assignment PIN_A8 -to usb_d[9]
+set_location_assignment PIN_B8 -to usb_sloe
+set_location_assignment PIN_C8 -to usb_d[11]
+set_location_assignment PIN_D8 -to usb_d[8]
+set_location_assignment PIN_E8 -to usb_fifoa0
+set_location_assignment PIN_F7 -to usb_d[15]
+set_location_assignment PIN_A6 -to usb_d[14]
+set_location_assignment PIN_D11 -to usb_d[3]
+set_location_assignment PIN_E11 -to usb_flagb
+set_location_assignment PIN_A12 -to usb_d[10]
+set_location_assignment PIN_B12 -to usb_flaga
+set_location_assignment PIN_A11 -to usb_d[2]
+set_location_assignment PIN_C11 -to usb_ifclk
+set_location_assignment PIN_F10 -to usb_d[6]
+set_location_assignment PIN_F9 -to usb_d[0]
+set_location_assignment PIN_F11 -to usb_d[5]
+set_location_assignment PIN_A10 -to usb_d[13]
+set_location_assignment PIN_C9 -to usb_int
+set_location_assignment PIN_D9 -to usb_fifoa2
+set_location_assignment PIN_E9 -to usb_flagc
+set_location_assignment PIN_A9 -to usb_d[7]
+set_location_assignment PIN_B9 -to usb_pktend
+set_location_assignment PIN_B13 -to usb_vbus
+set_location_assignment PIN_L16 -to usb_slwr
+set_location_assignment PIN_A7 -to usb_slrd
+set_location_assignment PIN_B7 -to usb_cs
+set_location_assignment PIN_C6 -to usb_reset
+set_location_assignment PIN_C15 -to sram_d[14]
+set_location_assignment PIN_C16 -to sram_we
+set_location_assignment PIN_G11 -to sram_d[10]
+set_location_assignment PIN_D15 -to sram_d[11]
+set_location_assignment PIN_B16 -to sram_oe
+set_location_assignment PIN_F16 -to sram_d[8]
+set_location_assignment PIN_F13 -to sram_ce
+set_location_assignment PIN_G16 -to sram_d[15]
+set_location_assignment PIN_H15 -to sram_a[16]
+set_location_assignment PIN_H16 -to sram_a[3]
+set_location_assignment PIN_J12 -to sram_a[14]
+set_location_assignment PIN_J15 -to sram_a[18]
+set_location_assignment PIN_J11 -to sram_a[12]
+set_location_assignment PIN_L14 -to sram_d[9]
+set_location_assignment PIN_N15 -to sram_a[17]
+set_location_assignment PIN_N16 -to sram_a[13]
+set_location_assignment PIN_K11 -to sram_d[12]
+set_location_assignment PIN_R16 -to sram_a[15]
+set_location_assignment PIN_P15 -to sram_le
+set_location_assignment PIN_N14 -to sram_a[8]
+set_location_assignment PIN_K12 -to sram_a[10]
+set_location_assignment PIN_L12 -to sram_a[11]
+set_location_assignment PIN_N13 -to sram_a[6]
+set_location_assignment PIN_M11 -to sram_a[7]
+set_location_assignment PIN_L11 -to sram_d[1]
+set_location_assignment PIN_T15 -to sram_d[2]
+set_location_assignment PIN_T14 -to sram_d[7]
+set_location_assignment PIN_N11 -to sram_a[9]
+set_location_assignment PIN_T13 -to sram_d[13]
+set_location_assignment PIN_R13 -to sram_d[5]
+set_location_assignment PIN_T12 -to sram_a[5]
+set_location_assignment PIN_R12 -to sram_d[3]
+set_location_assignment PIN_C14 -to sram_d[6]
+set_location_assignment PIN_D14 -to sram_he
+set_location_assignment PIN_D12 -to sram_a[0]
+set_location_assignment PIN_A13 -to sram_d[4]
+set_location_assignment PIN_A14 -to sram_a[2]
+set_location_assignment PIN_B14 -to sram_a[1]
+set_location_assignment PIN_E10 -to sram_a[4]
+set_location_assignment PIN_A15 -to sram_d[0]
+set_location_assignment PIN_A2 -to fpga_cclk
+set_location_assignment PIN_B3 -to fpga_din
+set_location_assignment PIN_A4 -to fpga_done
+set_location_assignment PIN_D6 -to fpga_init
+set_location_assignment PIN_T9 -to fpga_prog
+set_location_assignment PIN_B10 -to spi_csa
+set_location_assignment PIN_D5 -to spi_csd
+set_location_assignment PIN_A3 -to spi_miso
+set_location_assignment PIN_E6 -to spi_mosi
+set_location_assignment PIN_E7 -to spi_sck
+set_global_assignment -name VHDL_FILE ../firmware/bin/Release/fastram.vhd
+set_global_assignment -name VHDL_FILE sources/bus/spi_master.vhd
+set_global_assignment -name VHDL_FILE sources/bus/interrupt.vhd
+set_global_assignment -name VHDL_FILE sources/bus/io_port.vhd
+set_global_assignment -name VHDL_FILE sources/bus/i_port.vhd
+set_global_assignment -name VHDL_FILE sources/bus/bitfile_loader.vhd
+set_global_assignment -name VHDL_FILE sources/bus/timer.vhd
+set_global_assignment -name VHDL_FILE sources/bus/o_port.vhd
+set_global_assignment -name VHDL_FILE sources/mips/shifter.vhd
+set_global_assignment -name VHDL_FILE sources/mips/reg_bank.vhd
+set_global_assignment -name VHDL_FILE sources/mips/pc_next.vhd
+set_global_assignment -name VHDL_FILE sources/mips/mult.vhd
+set_global_assignment -name VHDL_FILE sources/mips/mlite_pack.vhd
+set_global_assignment -name VHDL_FILE sources/mips/mlite_cpu.vhd
+set_global_assignment -name VHDL_FILE sources/mips/mem_ctrl.vhd
+set_global_assignment -name VHDL_FILE sources/mips/control.vhd
+set_global_assignment -name VHDL_FILE sources/mips/bus_mux.vhd
+set_global_assignment -name VHDL_FILE sources/mips/alu.vhd
+set_global_assignment -name SDC_FILE sources/Firmware.sdc
+set_global_assignment -name VHDL_FILE sources/Firmware.vhd
+set_global_assignment -name QIP_FILE sources/clock/clock.qip
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

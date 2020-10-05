@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="firmware" />
+		<Option pch_mode="2" />
+		<Option compiler="mips-gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/firmware.elf" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="5" />
+				<Option compiler="mips-gcc" />
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/firmware.elf" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="5" />
+				<Option compiler="mips-gcc" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Os" />
+			<Add option="-Wall" />
+			<Add option="-mips1" />
+			<Add option="-mpatfree" />
+			<Add option="-msoft-float" />
+			<Add option="-ffunction-sections" />
+			<Add option="-fdata-sections" />
+		</Compiler>
+		<Linker>
+			<Add option="-Wl,--gc-sections" />
+			<Add option="-nostartfiles" />
+			<Add option="-T script.ld" />
+			<Add option="-mips1" />
+			<Add option="-mpatfree" />
+			<Add library="c" />
+			<Add library="m" />
+			<Add library="gcc" />
+			<Add directory="$(CODEBLOCKS)/compilers/mips-gcc/mips-elf/lib/soft-float" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="mips-elf-objcopy -O binary $exe_output $exe_dir\$exe_name.bin" />
+			<Add after="mips-elf-size $exe_output" />
+		</ExtraCommands>
+		<Unit filename="crt0.s" />
+		<Unit filename="descriptor.h" />
+		<Unit filename="hardware.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="script.ld" />
+		<Unit filename="sx2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sx2.h" />
+		<Unit filename="sx2_registers.h" />
+		<Unit filename="syscalls.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
