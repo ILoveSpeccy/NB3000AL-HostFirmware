@@ -9,7 +9,8 @@ So, set jumper "Platform upgrade enable" and switch on the board. "Golden" boot 
 Now start the Altium Designer and automatic firmware update will start.
 Click on "next" button, select new firmware (bin\Firmware.bin in this repository) and click "next" again.
 Update process will take a few minutes. Done!
-Don't forget to remove the "Platform upgrade enable" jumper.
+
+Don't forget to remove the "Platform upgrade enable" jumper. The board should be switched off and on again.
 
 Now the driver should be installed. I used Zadig 2.5 (https://zadig.akeo.ie) to install WinUSB driver.
 
